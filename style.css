@@ -1,0 +1,55 @@
+/* 1. Root */
+
+:root {
+  --background-color: #fff8ee;
+  --text-color: #552903;
+  --primary-font-family: "roboto", sans-serif;
+  --secondary-font-family: "Montserrat";
+}
+
+html,
+body {
+  max-width: 100%;
+  background-color: var(--background-color);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+}
+
+/* 2. Navigation */
+
+.header {
+  border-bottom: 2px solid #552903;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  min-height: 60px;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 0;
+}
+
+.nav-item {
+  padding: 5px 30px;
+  font-family: var(--primary-font-family);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+}
