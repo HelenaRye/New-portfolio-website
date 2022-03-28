@@ -117,6 +117,12 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  font-size: 7.5em;
+  font-weight: 20;
+  font-family: "Wagon-italic", sans-serif;
+}
+
 h1 span {
   font-family: var(--third-font-family);
 }
@@ -233,11 +239,90 @@ h1 span {
   }
 }
 
+/* About section */
+
+.about-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+  flex-wrap: wrap;
+}
+
+.about-image-container {
+  content: "  ";
+  border-radius: 300px;
+  border: 1px solid var(--text-color);
+  padding: 10px;
+  width: 450px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+}
+
+.about-img {
+  width: 400px;
+  border-radius: 357px;
+  border: 2px solid var(--text-color);
+  margin: 15px;
+}
+
+.about-title {
+  z-index: 999;
+  max-height: 160px;
+}
+
+.big-star-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: -70px;
+}
+
+.small-star-icon {
+  width: 40px;
+  height: 40px;
+  padding-top: 40px;
+}
+
+.about-text-content p {
+  font-size: 20px;
+  font-family: var(--primary-font-family);
+  font-weight: lighter;
+  line-height: 1.5;
+}
+
+.about-text-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 90px;
+}
+
+.about-first-paragraph,
+.about-second-paragraph {
+  width: 65%;
+  text-indent: 60px;
+}
+
+.about-second-paragraph {
+  padding-top: 50px;
+  margin-right: -50px;
+}
+
 /* Mobile */
 
 @media screen and (max-width: 767px) {
   h1 {
-    font-size: 3.2em;
+    font-size: 3.4em;
   }
 
   .star {
@@ -302,5 +387,51 @@ h1 span {
 
   .hero-content {
     padding-bottom: 5rem;
+  }
+
+  .about-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-first-paragraph,
+  .about-second-paragraph {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  .about-text-content {
+    width: 100%;
+    align-items: center;
+    padding-top: 30px;
+  }
+
+  .about-second-paragraph {
+    margin-right: 0px;
+    padding-top: 30px;
+  }
+
+  .about-img {
+    width: 280px;
+  }
+
+  .about-image-container {
+    content: "  ";
+    border-radius: 300px;
+    width: 320px;
+  }
+
+  h2 {
+    font-size: 5em;
+    margin-bottom: -60px;
+  }
+
+  .about-image-content {
+    width: 100%;
+  }
+  .small-star-icon {
+    padding-top: 10px;
+    width: 35px;
+    height: 35px;
   }
 }
