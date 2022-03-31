@@ -13,7 +13,7 @@
 /* 1. Root */
 
 :root {
-  --background-color: #fff8ee;
+  --background-color: #fef9ee;
   --text-color: #552903;
   --primary-font-family: "roboto", sans-serif;
   --secondary-font-family: "Wagon";
@@ -26,6 +26,7 @@ body {
   height: 100%;
   background-color: var(--background-color);
   overflow-x: hidden;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   color: var(--text-color);
@@ -239,6 +240,15 @@ h1 span {
   }
 }
 
+/* Projects section */
+
+.inverted-corner {
+  background-color: #3498db;
+  border-corner-shape: scoop;
+  border-radius: 30px;
+  width: 200px;
+  height: 200px;
+}
 /* About section */
 
 .about-wrapper {
@@ -316,6 +326,81 @@ h1 span {
 .about-second-paragraph {
   padding-top: 50px;
   margin-right: -50px;
+}
+
+/* Contact section */
+.contact-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.contact-title h2 {
+  margin: 0;
+  padding-bottom: 50px;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 0;
+}
+
+.form-block form {
+}
+
+.form-block {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  width: 100%;
+}
+
+.text-area {
+  max-width: 100%;
+  width: 100%;
+  min-height: 160px;
+  border: 1px solid var(--text-color);
+  background-color: transparent;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  font-family: var(--secondary-font-family);
+  font-weight: 70;
+  box-sizing: border-box;
+}
+
+.form-field {
+  width: 500px;
+  margin-bottom: 40px;
+  padding-right: 20px;
+  padding-left: 6px;
+  border-bottom: 1px solid var(--text-color);
+  background-color: transparent;
+  font-size: 1.5rem;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  box-sizing: border-box;
+}
+
+.Message-field {
+  font-family: var(--secondary-font-family);
+  font-weight: 70;
+  font-size: 1.5rem;
+  box-sizing: border-box;
+}
+
+::placeholder {
+  font-size: 1.5rem;
+  font-family: var(--secondary-font-family);
+  font-weight: 70;
+  color: var(--text-color);
 }
 
 /* Mobile */
