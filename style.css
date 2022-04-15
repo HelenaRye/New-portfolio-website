@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: "Wagon-bold";
+  src: url(Fonts/wagon-bold-webfont.woff);
+}
+
+@font-face {
   font-family: "Wagon-italic";
   src: url(Fonts/wagon-extralightitalic-webfont.woff);
 }
@@ -30,6 +35,56 @@ body {
   margin: 0;
   padding: 0;
   color: var(--text-color);
+}
+
+p {
+  font-family: var(--primary-font-family);
+  font-size: 19px;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: var(--secondary-font-family);
+  font-size: 8.2em;
+  font-weight: 70;
+  margin: 0;
+}
+
+h2 {
+  font-size: 7.5em;
+  font-weight: 20;
+  font-family: "Wagon-italic", sans-serif;
+}
+
+h3 {
+  font-size: 3em;
+  font-weight: 20;
+  font-family: "Wagon", sans-serif;
+}
+
+/* Button */
+
+.button {
+  font-family: "Wagon-bold", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: 5;
+  color: var(--text-color);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button::after {
+  content: "  ";
+  display: block;
+  margin-top: 10px;
+  width: 100%;
+  border: 1px solid var(--text-color);
+}
+
+.button-container {
+  display: inline-block;
 }
 
 /* 2. Navigation */
@@ -109,19 +164,6 @@ ul {
   display: flex;
   flex-direction: row;
   margin-top: -30px;
-}
-
-h1 {
-  font-family: var(--secondary-font-family);
-  font-size: 8.2em;
-  font-weight: 70;
-  margin: 0;
-}
-
-h2 {
-  font-size: 7.5em;
-  font-weight: 20;
-  font-family: "Wagon-italic", sans-serif;
 }
 
 h1 span {
@@ -241,15 +283,102 @@ h1 span {
 }
 
 /* Projects section */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Project-1 Project-2"
+    "Project-3 Project-4";
+}
 
-.inverted-corner {
-  background-color: #3498db;
-  border-corner-shape: scoop;
-  border-radius: 30px;
+.Project-3 {
+  grid-area: Project-3;
+}
+
+.Project-1 {
+  grid-area: Project-1;
+}
+
+.Project-2 {
+  grid-area: Project-2;
+}
+
+.Project-4 {
+  grid-area: Project-4;
+}
+
+.project-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.Project-3 {
+  padding: 0px 90px 0px 90px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Project-2 {
+  padding: 500px 90px 0px 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Project-1 {
+  padding: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Project-4 {
+  padding: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.project-wrapper {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.project-title {
+  margin: 0;
+}
+
+.project-content {
+  padding-top: 20px;
+}
+
+.view-all-circle {
   width: 200px;
   height: 200px;
+  position: relative;
+  display: flex;
+  margin-top: -250px;
+  margin-left: 20em;
+  justify-content: center;
+  justify-content: center;
 }
+
 /* About section */
+
+.about-section {
+  padding-top: 150px;
+}
 
 .about-wrapper {
   display: flex;
@@ -303,7 +432,7 @@ h1 span {
 }
 
 .about-text-content p {
-  font-size: 20px;
+  font-size: 19px;
   font-family: var(--primary-font-family);
   font-weight: lighter;
   line-height: 1.5;
@@ -347,9 +476,6 @@ h1 span {
   padding: 100px 0;
 }
 
-.form-block form {
-}
-
 .form-block {
   width: 500px;
   display: flex;
@@ -376,7 +502,7 @@ form {
 }
 
 .form-field {
-  width: 500px;
+  width: 100%;
   margin-bottom: 40px;
   padding-right: 20px;
   padding-left: 6px;
@@ -474,6 +600,10 @@ form {
     padding-bottom: 5rem;
   }
 
+  .about-section {
+    padding-top: 50px;
+  }
+
   .about-wrapper {
     display: flex;
     flex-direction: column;
@@ -518,5 +648,38 @@ form {
     padding-top: 10px;
     width: 35px;
     height: 35px;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-flow: column;
+    grid-template-areas:
+      "Project-1"
+      "Project-2"
+      "Project-3"
+      "Project-4";
+  }
+
+  .Project-1,
+  .Project-2,
+  .Project-3,
+  .Project-4 {
+    padding: 30px 20px;
+  }
+
+  .view-all-circle {
+    margin: 0 auto;
+    height: 150px;
+    width: 150px;
+    padding-top: 50px;
+  }
+
+  .form-block {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
