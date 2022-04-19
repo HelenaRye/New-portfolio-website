@@ -22,26 +22,30 @@
   
  <!-- Locomotive scroll -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+
 
     <!-- styles -->
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+
 
   </head>
   <body>
+    <div class="page-container" data-scroll-container>
+    
     <!-- Navigation -->
-    <header class="header">
-      <nav class="container navbar">
+    <header class="header" data-scroll-section>
+      <nav class="container navbar" data-scroll>
         <a href="/" class="nav-logo">2022 © Helena Rye</a>
         <ul class="nav-menu">
           <li class="nav-item">
-            <a href="/" class="nav-link">Projects</a>
+            <a href="#projects" class="nav-link" data-scroll-to>Projects</a>
           </li>
           <li class="nav-item">
-            <a href="/#about" class="nav-link">About</a>
+            <a href="#about" class="nav-link" data-scroll-to>About</a>
           </li>
           <li class="nav-item">
-            <a href="/#contact" class="nav-link">Contact</a>
+            <a href="#contact" class="nav-link" data-scroll-to>Contact</a>
           </li>
         </ul>
         <div class="hamburger">
@@ -49,15 +53,14 @@
         </div>
       </nav>
     </header>
-
+  
      <!-- Hero section -->
 
-    <section class="page-container" data-scroll-container>
-    <section class="background-container">
-    <section class="hero-section" data-scroll-section>
+    <section class="background-container" data-scroll-section>
+    <section class="hero-section" data-scroll-section data-scroll-delay="1"; data-scroll-section-inview="">
       <div class="hero-wrapper">
-        <div class="headline-1">
-          <h1>Front-end <span class="developer">developer</span><span class="star-circle-mobile-only">
+        <div class="headline-1" data-scroll data-offset="2.8">
+          <h1 class="title-1">Front-end <span class="developer">developer</span><span class="star-circle-mobile-only">
             <svg
               id="Lag_1"
               data-name="Lag 1"
@@ -92,7 +95,7 @@
               />
             </svg>
         </div>
-        <div class="headline-2">
+        <div class="headline-2" data-scroll data-offset="0.8">
           <span class="star">
             <svg
               id="Lag_1"
@@ -115,7 +118,7 @@
             </svg>
           </span></h1>
 
-          <h1>&#38; web <span class="designer">designer</span></h1>
+          <h1 >&#38; web <span class="designer">designer</span></h1>
           <span class="star-circle">
             <svg
               id="Lag_1"
@@ -157,8 +160,7 @@
     <div class="hero-content" data-scroll-section>
       <div class="hero-text">
         <p>
-          Hello I am Helena Rye, I am a front-end developer and web designer,
-          currently based in Denmark.
+          Hello, I am Helena Rye. A self-taught, creative front-end developer with passion for design. Currently based in Copenhagen, Denmark.
         </p>
       </div>
       <div class="view-projects-circle">
@@ -479,18 +481,18 @@
    
     <!-- Projects section -->
 
-    <section class="projects-section" data-scroll-section>
+    <section class="projects-section" data-scroll-section id="projects">
       <div class="projects-container">
         <div class="Project-3">
           <div class="project-wrapper">
             <img src="Images/pl-klargoring.jpeg" class="project-img">
           </div>
-          <div class="project-content">
-            <h3 class="project-title">Portfolio website</h3>
-            <p class="project-description">A static website for a small car cleaning and cheramic coating company. Coded with HTML, CSS, Bootstrap and JQuery</p>
+          <div class="project-content" data-scroll>
+            <h3 class="project-title" data scroll data-scroll-speed="1">Portfolio website</h3>
+            <p class="project-description" data scroll data-scroll-speed="2">A static website for a small car cleaning and cheramic coating company. Coded with HTML, CSS, Bootstrap and JQuery</p>
             <div class="button-container">
 
-              <a href src="https://pl-klargoring.dk/" target="_blank" class="button">View project</a>
+              <a href src="https://pl-klargoring.dk/" target="_blank" class="button rolling-text">View project</a>
 
 
             </div>
@@ -504,28 +506,28 @@
             <h3 class="project-title">Pl Klargøring</h3>
             <p class="project-description">A static website for a small car cleaning and cheramic coating company. Coded with HTML, CSS, Bootstrap and JQuery</p>
             <div class="button-container">
-              <a href src="https://pl-klargoring.dk/" target="_blank" class="button">View project</a>
+              <a href src="https://pl-klargoring.dk/" target="_blank" class="button rolling-text">View project</a>
             </div>
           </div>
         </div>
         <div class="Project-2">
           <div class="project-wrapper">
-            <img src="Images/pl-klargoring.jpeg" class="project-img">
+            <img src="Images/weatherapp.jpg" class="project-img">
           </div>
           <div class="project-content">
             <h3 class="project-title">Weather App</h3>
             <p class="project-description">A weather app with a clean and minimalistic design coded in React. The weather app utilizes OpenWeather API enabeling the user to look up the current weather for the searched location.</p>
-            <div class="button-container"><a href src="https://pl-klargoring.dk/" target="_blank" class="button">View project</a></div>
+            <div class="button-container"><a href src="https://festive-wilson-71aaa3.netlify.app/" target="_blank" class="button rolling-text">View project</a></div>
           </div>
         </div>
         <div class="Project-4">
           <div class="project-wrapper">
-            <img src="Images/pl-klargoring.jpeg" class="project-img">
+            <img src="Images/kanbanboard.jpg" class="project-img">
           </div>
           <div class="project-content">
             <h3 class="project-title">Kanban board</h3>
             <p class="project-description">A static website for a small car cleaning and cheramic coating company. Coded with HTML, CSS, Bootstrap and JQuery</p>
-            <div class="button-container"><a href src="https://pl-klargoring.dk/" target="_blank" class="button">View project</a></div>
+            <div class="button-container"><a href src="https://helenarye.github.io/Drag-and-Drop-VanillaJS/" target="_blank" class="button rolling-text">View project</a></div>
           </div>
         </div>
       </div>
@@ -540,7 +542,7 @@
     <!-- About section -->
 
     <section class="about-section" id="about" data-scroll-section>
-      <div class="about-wrapper">
+      <div class="about-wrapper" data-scroll data-scroll-delay="4"; data-scroll-section-inview="">
         <div class="about-image-content">
           <div class="big-star-icon">
             <svg
@@ -563,7 +565,7 @@
               />
             </svg>
           </div>
-          <div class="about-title">
+          <div class="about-title" data-scroll data-offset="0.8">
             <h2>About me</h2>
           </div>
           <div class="about-image-container">
@@ -633,9 +635,8 @@ I am passionate about creating beautiful websites and web applications that are 
       </div>
     </section>
 
-
-    <section class="contact-section" id="contact" data-scroll-section>
-      <div class="contact-icon">
+    <section class="contact-section" id="contact" data-scroll-section data-scroll-delay="6"; data-scroll-section-inview="">
+      <div class="contact-icon" data-scroll>
         <svg
               id="Lag_1"
               data-name="Lag 1"
@@ -670,7 +671,9 @@ I am passionate about creating beautiful websites and web applications that are 
               />
             </svg>
       </div>
-      <div class="contact-title">
+
+      
+      <div class="contact-title" data-scroll data-offset="0.8">
         <h2>Contact</h2>
       </div>
       <div class="form-block">
@@ -689,24 +692,26 @@ I am passionate about creating beautiful websites and web applications that are 
                <button type="submit" id="submit"> Submit </button>
           </div>
         </form>
+        <div class="footer">
+          <div class="socials">
+            <ul>
+            <li>Github</li>
+            <li>Linkedin</li>
+            <li>Instagram</li>
+          </ul>
+        </div>
+          <span class="copyright">All rights reserved - 2022 © Helena Rye</span>
+        </div> 
+        </div>
+       
       </div>
       
     </section>
 
-  
-    <footer class="footer-section" data-scroll-section>
-      <div class="footer-links" data-scroll-section>
-        <div class="socials">
-          <ul>
-          <li>Github</li>
-          <li>Linkedin</li>
-          <li>Instagram</li>
-        </ul>
-      </div>
-        <span class="copyright">All rights reserved - 2022 © Helena Rye</span>
-      </div>
-    </footer>
-  </section>
+ 
+  </div>
+
 <script src="script.js"></script>
+
   </body>
 </html>

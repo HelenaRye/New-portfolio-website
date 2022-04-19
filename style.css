@@ -34,20 +34,23 @@ html.has-scroll-smooth {
   bottom: 0;
 }
 
-.page-container {
-  margin: 0;
-}
-
 html,
 body {
   max-width: 100%;
   height: 100%;
   background-color: var(--background-color);
-  overflow-x: hidden;
-  box-sizing: border-box;
+  overflow: hidden;
   margin: 0;
   padding: 0;
   color: var(--text-color);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.page-container {
+  position: relative;
 }
 
 p {
@@ -74,6 +77,13 @@ h3 {
   font-size: 3em;
   font-weight: 20;
   font-family: "Wagon", sans-serif;
+}
+
+.background-container {
+  background-image: url(images/bg-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Button */
@@ -108,6 +118,8 @@ h3 {
 
 .header {
   border-bottom: 2px solid #552903;
+  background-color: var(--background-color) !important;
+  z-index: 9999 !important;
 }
 
 .navbar {
@@ -223,6 +235,44 @@ h1 span {
   padding-bottom: 7rem;
 }
 
+/* Animation */
+
+.headline-1 h1 {
+  transform: translate3d(0, 120%, 0);
+}
+
+.headline-1.is-inview h1 {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s;
+}
+
+.headline-2 h1 {
+  transform: translate3d(0, 120%, 0);
+}
+
+.headline-2.is-inview h1 {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+}
+
+.about-title h2 {
+  transform: translate3d(0, 120%, 0);
+}
+
+.about-title.is-inview h2 {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+}
+
+.contact-title h2 {
+  transform: translate3d(0, 120%, 0);
+}
+
+.contact-title.is-inview h2 {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+}
+
 /* Paragraph */
 .hero-text {
   width: 650px;
@@ -230,9 +280,9 @@ h1 span {
 
 .hero-text p {
   font-family: var(--primary-font-family);
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 100;
-  width: 70%;
+  width: 65%;
 }
 
 /* View projects button */
@@ -340,6 +390,13 @@ h1 span {
     "Project-3 Project-4";
 }
 
+.projects-section {
+  background-image: url(images/bg-2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .Project-3 {
   grid-area: Project-3;
 }
@@ -426,6 +483,10 @@ h1 span {
   padding-top: 150px;
   display: flex;
   justify-content: center;
+  background-image: url(images/bg-3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .about-wrapper {
@@ -522,7 +583,12 @@ h1 span {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 150px 0;
+  padding-top: 150px;
+  padding-bottom: 90px;
+  background-image: url(images/bg-4.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .form-block {
@@ -610,12 +676,15 @@ input:focus {
 
 /* Footer */
 
-.footer-links {
+.footer {
+  padding-top: 40px;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  justify-content: center;
   border-top: 2px solid var(--text-color);
+  flex-direction: column;
+  margin-top: 100px;
 }
 
 .socials ul {
@@ -626,7 +695,7 @@ input:focus {
   letter-spacing: 0.7px;
 }
 
-.footer-links .copyright {
+.footer .copyright {
   padding: 0px 30px;
   font-family: var(--primary-font-family);
   font-weight: 350;
@@ -806,5 +875,9 @@ input:focus {
 
   .socials ul {
     margin: 0;
+  }
+
+  .footer {
+    padding-bottom: 50px;
   }
 }
