@@ -18,8 +18,8 @@
 /* 1. Root */
 
 :root {
-  --background-color: #fef9ee;
-  --text-color: #552903;
+  --background-color: #fff8ee;
+  --text-color: #482303;
   --primary-font-family: "roboto", sans-serif;
   --secondary-font-family: "Wagon";
   --third-font-family: "Wagon-italic";
@@ -49,10 +49,6 @@ html {
   box-sizing: border-box;
 }
 
-.page-container {
-  position: relative;
-}
-
 p {
   font-family: var(--primary-font-family);
   font-size: 19px;
@@ -80,7 +76,12 @@ h3 {
 }
 
 .background-container {
-  background-image: url(images/bg-1.jpg);
+  background: radial-gradient(
+    ellipse 50% 500px,
+    #ffa996c2 20%,
+    #fff8ee 70%,
+    #fff8ee
+  );
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -89,27 +90,26 @@ h3 {
 /* Button */
 
 .button {
-  font-family: "Wagon-bold", sans-serif;
-  font-size: 1.5em;
-  font-weight: 700;
-  letter-spacing: 5;
+  font-family: "Wagon-italic", sans-serif;
+  font-size: 1.3em;
   color: var(--text-color);
   cursor: pointer;
   text-decoration: none;
   overflow: hidden;
-  position: relative;
+  border-radius: 100%;
+  padding: 10px 30px;
+  border: 1px solid var(--text-color);
+  transition: all 0.2s ease-in-out;
 }
 
-.button::after {
-  content: "  ";
-  display: block;
-  margin-top: 10px;
-  width: 100%;
-  border: 1px solid var(--text-color);
+.button:hover {
+  box-shadow: 0 5px 15px rgba(255, 161, 117, 0.4);
+  background: #fff;
 }
 
 .button-container {
   display: inline-block;
+  padding-top: 1.5rem;
 }
 
 /* Button hover */
@@ -117,9 +117,8 @@ h3 {
 /* 2. Navigation */
 
 .header {
-  border-bottom: 2px solid #552903;
+  border-bottom: 1.5px solid var(--text-color);
   background-color: var(--background-color) !important;
-  z-index: 9999 !important;
 }
 
 .navbar {
@@ -180,6 +179,36 @@ li {
 
 .mobile-menu {
   display: none;
+}
+
+/* Hamburger menu */
+
+.line1,
+.line2 {
+  width: 40px;
+  height: 1.5px;
+  background: var(--text-color);
+  margin: 8px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .line1 {
+  transform: rotate(-45deg) translate(-1px, 2px);
+}
+
+/* Rotate last bar */
+.change .line2 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+.hamburger {
+  position: fixed;
+  display: none;
+  cursor: pointer;
+  z-index: 99999;
+  top: 1rem;
+  right: 2rem;
 }
 
 /* 3. Hero section */
@@ -322,8 +351,8 @@ h1 span {
 
 .horizonal-scroll-section {
   height: 70px;
-  border-bottom: 2px solid #552903;
-  border-top: 2px solid #552903;
+  border-bottom: 1.5px solid var(--text-color);
+  border-top: 1.5px solid var(--text-color);
   padding: 10px 0;
 }
 
@@ -389,12 +418,18 @@ h1 span {
     "Project-1 Project-2"
     "Project-3 Project-4";
 }
-
+/*
 .projects-section {
   background-image: url(images/bg-2.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+*/
+
+.project-wrapper img {
+  border: 1.5px solid var(--text-color);
+  border-radius: 20px;
 }
 
 .Project-3 {
@@ -483,10 +518,9 @@ h1 span {
   padding-top: 150px;
   display: flex;
   justify-content: center;
-  background-image: url(images/bg-3.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .about-wrapper {
@@ -497,6 +531,7 @@ h1 span {
   padding-top: 100px;
   padding-bottom: 200px;
   flex-wrap: wrap;
+  padding-top: 15rem;
 }
 
 .about-image-container {
@@ -504,7 +539,7 @@ h1 span {
   border-radius: 300px;
   border: 1px solid var(--text-color);
   padding: 10px;
-  width: 450px;
+  width: 430px;
   display: flex;
   justify-content: center;
 }
@@ -522,23 +557,24 @@ h1 span {
   border-radius: 357px;
   border: 2px solid var(--text-color);
   margin: 15px;
+  box-shadow: 0 0 100px 20px #ffa996c2, 0 0 140px 20px #ffa996c2;
 }
 
 .about-title {
-  z-index: 999;
+  z-index: 8;
   max-height: 160px;
 }
 
 .big-star-icon {
   width: 60px;
   height: 60px;
-  margin-bottom: -80px;
+  margin-bottom: -90px;
 }
 
 .small-star-icon {
   width: 40px;
   height: 40px;
-  padding-top: 40px;
+  padding-top: 30px;
 }
 
 .about-text-content p {
@@ -559,7 +595,6 @@ h1 span {
 .about-first-paragraph,
 .about-second-paragraph {
   width: 65%;
-  text-indent: 60px;
 }
 
 .about-second-paragraph {
@@ -585,10 +620,12 @@ h1 span {
   flex-direction: column;
   padding-top: 150px;
   padding-bottom: 90px;
-  background-image: url(images/bg-4.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: radial-gradient(
+    ellipse 40% 500px,
+    #ffa996c2 20%,
+    #fff8ee 80%,
+    #fff8ee
+  );
 }
 
 .form-block {
@@ -655,23 +692,22 @@ input:focus {
 }
 
 #submit {
-  font-family: "Wagon-bold", sans-serif;
-  font-size: 1.5em;
-  font-weight: 700;
-  letter-spacing: 5;
+  font-family: "Wagon-italic", sans-serif;
+  font-size: 1.3em;
   color: var(--text-color);
   cursor: pointer;
   text-decoration: none;
   border: none;
   background-color: transparent;
+  border-radius: 100%;
+  padding: 10px 30px;
+  border: 1px solid var(--text-color);
 }
 
-#submit::after {
-  content: "  ";
-  display: block;
-  margin-top: 10px;
-  width: 100%;
-  border: 1px solid var(--text-color);
+#submit:hover {
+  box-shadow: 0 5px 15px rgba(255, 161, 117, 0.4);
+  transition: all 0.2s ease-in-out;
+  background: #fff;
 }
 
 /* Footer */
@@ -682,7 +718,7 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 2px solid var(--text-color);
+  border-top: 1.5px solid var(--text-color);
   flex-direction: column;
   margin-top: 100px;
 }
@@ -701,6 +737,90 @@ input:focus {
   font-weight: 350;
   font-size: 16px;
   letter-spacing: 0.7px;
+}
+
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 5.3em;
+  }
+
+  .hero-section {
+    min-height: 30vh;
+  }
+
+  .star,
+  .star-circle {
+    margin-top: 40px;
+  }
+
+  .hero-text p {
+    width: 50%;
+    font-size: 20px;
+    padding-left: 32px;
+  }
+
+  .scroll-arrow {
+    width: 55px;
+    height: 55px;
+  }
+
+  .view-projects-circle {
+    width: 150px;
+    height: 150px;
+  }
+
+  .view-all-circle {
+    width: 150px;
+    height: 150px;
+    margin-top: -10px;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-flow: column;
+    grid-template-areas:
+      "Project-1"
+      "Project-2"
+      "Project-3"
+      "Project-4";
+  }
+
+  .Project-1,
+  .Project-2,
+  .Project-3,
+  .Project-4 {
+    padding: 80px 60px;
+  }
+
+  .project-content {
+    padding-top: 40px;
+  }
+
+  .about-text-content {
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-image-content {
+    width: 100%;
+    padding-top: 50px;
+  }
+
+  .about-second-paragraph {
+    margin-right: 0px;
+    padding-top: 10px;
+  }
+
+  .about-wrapper {
+    padding-top: 10rem;
+  }
+
+  .about-first-paragraph,
+  .about-second-paragraph {
+    width: 70%;
+  }
 }
 
 /* Mobile */
@@ -737,8 +857,8 @@ input:focus {
   }
 
   .hero-text p {
-    font-size: 20px;
-    width: 300px;
+    font-size: 17px;
+    width: 250px;
     line-height: 1.4;
     padding: 0 15px;
     margin-top: 50px;
@@ -755,6 +875,7 @@ input:focus {
     margin-left: 60%;
     width: 150px;
     height: 150px;
+    padding-top: 3rem;
   }
 
   .scroll-arrow {
@@ -839,7 +960,7 @@ input:focus {
   .Project-2,
   .Project-3,
   .Project-4 {
-    padding: 30px 20px;
+    padding: 50px 12px 60px 12px;
   }
 
   .view-all-circle {
@@ -880,4 +1001,58 @@ input:focus {
   .footer {
     padding-bottom: 50px;
   }
+}
+
+/* Mobile navigation */
+
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    z-index: 99999 !important;
+    right: 0px;
+    height: 21vh;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    box-sizing: border-box;
+  }
+
+  .nav-menu {
+    justify-content: center;
+  }
+
+  .background-container {
+    position: relative;
+    box-sizing: border-box;
+    margin-top: 40px;
+  }
+
+  .hamburger {
+    display: block;
+    margin: 20px 20px;
+  }
+
+  .background-container {
+    box-sizing: border-box;
+  }
+
+  .nav-logo {
+    display: none;
+  }
+
+  .navbar {
+    padding-bottom: 20px;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
 }
