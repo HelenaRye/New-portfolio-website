@@ -264,44 +264,6 @@ h1 span {
   padding-bottom: 7rem;
 }
 
-/* Animation */
-
-.headline-1 h1 {
-  transform: translate3d(0, 120%, 0);
-}
-
-.headline-1.is-inview h1 {
-  transform: translate3d(0, 0, 0);
-  transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s;
-}
-
-.headline-2 h1 {
-  transform: translate3d(0, 120%, 0);
-}
-
-.headline-2.is-inview h1 {
-  transform: translate3d(0, 0, 0);
-  transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
-}
-
-.about-title h2 {
-  transform: translate3d(0, 120%, 0);
-}
-
-.about-title.is-inview h2 {
-  transform: translate3d(0, 0, 0);
-  transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
-}
-
-.contact-title h2 {
-  transform: translate3d(0, 120%, 0);
-}
-
-.contact-title.is-inview h2 {
-  transform: translate3d(0, 0, 0);
-  transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
-}
-
 /* Paragraph */
 .hero-text {
   width: 650px;
