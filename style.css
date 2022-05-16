@@ -354,6 +354,7 @@ h1 span {
   border-bottom: 1.5px solid var(--text-color);
   border-top: 1.5px solid var(--text-color);
   padding: 10px 0;
+  background: #fff;
 }
 
 .featured-projects {
