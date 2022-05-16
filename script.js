@@ -4,4 +4,6 @@ const scroll = new LocomotiveScroll({
   smoothMobile: true,
 });
 
-
+document.addEventListener("lazyloaded", function () {
+  locoScroll.update();
+});
