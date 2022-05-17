@@ -11,7 +11,7 @@ const scroll = new LocomotiveScroll({
 });
 
 setTimeout(() => {
-  locoScroll.update();
+  scroll.update();
 }, 2000);
 
 // Scroll update all pages
