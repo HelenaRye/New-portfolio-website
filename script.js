@@ -13,3 +13,15 @@ const scroll = new LocomotiveScroll({
 setTimeout(() => {
   locoScroll.update();
 }, 2000);
+
+// Scroll update all pages
+
+document.addEventListener("DOMContentLoaded", function () {
+  function ScrollUpdateDelay() {
+    setTimeout(function () {
+      scroll.update();
+    }, 500);
+  }
+
+  ScrollUpdateDelay();
+});
