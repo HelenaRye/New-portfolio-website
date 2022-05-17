@@ -4,3 +4,7 @@ const scroll = new LocomotiveScroll({
   tablet: { smooth: true },
   smartphone: { smooth: true },
 });
+
+imagesLoaded(scrollContainer, { background: true }, function () {
+  scroll.update();
+});
