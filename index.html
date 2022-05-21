@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   
-  
+
 
     <!-- styles -->
     <link href="style.css" rel="stylesheet" type="text/css" />
@@ -36,13 +36,13 @@
         <a href="/" class="nav-logo">2022 © Helena Rye</a>
         <ul class="nav-menu"> 
           <li class="nav-item">
-            <a href="#projects" class="nav-link" >Projects</a>
+            <a href="#projects" class="nav-link is--first" >Projects</a>
           </li>
           <li class="nav-item">
-            <a href="#about" class="nav-link" >About</a>
+            <a href="#about" class="nav-link is--second" >About</a>
           </li>
           <li class="nav-item">
-            <a href="#contact" class="nav-link">Contact</a>
+            <a href="#contact" class="nav-link is--third">Contact</a>
           </li>
         </ul>
         <div class="hamburger">
@@ -729,6 +729,27 @@ I am passionate about creating beautiful websites and web applications that are 
 
 
   <script src="module.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
+  <script>
+    // Optional Script for Anchor Links
+    $('.nav-link.is--first').on('click', function() {
+        const slider = document.querySelector('#projects');
+        locoScroll.scrollTo(slider)
+    });
+    
+    $('.nav-link.is--second').on('click', function() {
+        const slider = document.querySelector('#about');
+        locoScroll.scrollTo(slider)
+    });
+    
+    $('.nav-link.is--third').on('click', function() {
+        const slider = document.querySelector('#contact');
+        locoScroll.scrollTo(slider)
+    });
+    
+    </script>
   </body>
 </html>
