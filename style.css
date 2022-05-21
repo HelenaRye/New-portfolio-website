@@ -25,23 +25,16 @@
   --third-font-family: "Wagon-italic";
 }
 
-html.has-scroll-smooth {
+html {
   overflow: hidden;
-  position: fixed;
-  min-height: 100vh;
-  height: 100vh;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
 }
 
 html,
 body {
   max-width: 100%;
+  overflow-x: hidden;
   height: 100%;
   background-color: var(--background-color);
-  overflow: hidden;
   margin: 0;
   padding: 0;
   color: var(--text-color);
@@ -84,9 +77,6 @@ h3 {
     #fff8ee 70%,
     #fff8ee
   );
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 /* Button */
