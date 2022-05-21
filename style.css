@@ -178,7 +178,7 @@ li {
 .line1,
 .line2 {
   width: 40px;
-  height: 1.5px;
+  height: 2px;
   background: var(--text-color);
   margin: 8px 0;
   transition: 0.4s;
@@ -198,7 +198,7 @@ li {
   position: fixed;
   display: none;
   cursor: pointer;
-  z-index: 99999 !important;
+  z-index: 99 !important;
   top: 1rem;
   right: 2rem;
 }
@@ -977,7 +977,7 @@ input:focus {
     left: 0;
     right: 0px;
     height: 21vh;
-    z-index: 9999;
+    z-index: 99;
     background-color: var(--background-color);
     display: flex;
     flex-direction: column;
@@ -999,7 +999,7 @@ input:focus {
   .hamburger {
     display: block;
     margin: 20px 20px;
-    z-index: 9999;
+    z-index: 100;
   }
 
   .background-container {
