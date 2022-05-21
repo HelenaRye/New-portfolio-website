@@ -25,6 +25,10 @@
   --third-font-family: "Wagon-italic";
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 html {
   overflow: hidden;
 }
@@ -38,10 +42,6 @@ body {
   margin: 0;
   padding: 0;
   color: var(--text-color);
-}
-
-html {
-  box-sizing: border-box;
 }
 
 p {
