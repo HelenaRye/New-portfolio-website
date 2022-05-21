@@ -169,10 +169,6 @@ li {
   list-style: none;
 }
 
-.mobile-menu {
-  display: none;
-}
-
 /* Hamburger menu */
 
 .line1,
@@ -987,8 +983,9 @@ input:focus {
     transition: transform 0.5s ease-in;
   }
 
-  .nav-menu ul {
+  nav {
     z-index: 99;
+    position: relative;
   }
   .nav-menu {
     justify-content: center;
