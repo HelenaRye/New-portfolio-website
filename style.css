@@ -198,7 +198,7 @@ li {
   position: fixed;
   display: none;
   cursor: pointer;
-  z-index: 99999;
+  z-index: 99999 !important;
   top: 1rem;
   right: 2rem;
 }
@@ -992,6 +992,7 @@ input:focus {
   .hamburger {
     display: block;
     margin: 20px 20px;
+    z-index: 9999;
   }
 
   .background-container {
