@@ -39,13 +39,13 @@
         <a href="/" class="nav-logo">2022 © Helena Rye</a>
         <ul class="nav-menu" data-scroll> 
           <li class="nav-item">
-            <a href="#projects" class="nav-link" data-scroll-to>Projects</a>
+            <a href="#projects" class="nav-link is--first">Projects</a>
           </li>
           <li class="nav-item">
-            <a href="#about" class="nav-link" data-scroll-to>About</a>
+            <a href="#about" class="nav-link is--second ">About</a>
           </li>
-          <li class="nav-item">
-            <a href="#contact" class="nav-link" data-scroll-to>Contact</a>
+          <li class="nav-item is--third">
+            <a href="#contact" class="nav-link is--third">Contact</a>
           </li>
         </ul>
         <div class="hamburger" data-scroll>
@@ -733,5 +733,23 @@ I am passionate about creating beautiful websites and web applications that are 
 
   <script src="module.js"></script>
 <script src="script.js"></script>
+<script>
+  // Optional Script for Anchor Links
+  $('.nav-item.is--first').on('click', function() {
+      const slider = document.querySelector('#projects');
+      locoScroll.scrollTo(slider)
+  });
+  
+  $('.nav-item.is--second').on('click', function() {
+      const slider = document.querySelector('#about');
+      locoScroll.scrollTo(slider)
+  });
+  
+  $('.nav-item.is--third').on('click', function() {
+      const slider = document.querySelector('#contact');
+      locoScroll.scrollTo(slider)
+  });
+  
+  </script>
   </body>
 </html>
