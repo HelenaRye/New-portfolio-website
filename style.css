@@ -928,6 +928,8 @@ input:focus {
       #fff8ee 90%,
       #fff8ee
     );
+
+    padding-bottom: 0px;
   }
   .background-container {
     background: radial-gradient(
