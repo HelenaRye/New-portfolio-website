@@ -850,10 +850,6 @@ input:focus {
     padding-bottom: 5rem;
   }
 
-  .about-section {
-    padding-top: 50px;
-  }
-
   .about-wrapper {
     display: flex;
     flex-direction: column;
