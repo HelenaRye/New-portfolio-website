@@ -13,7 +13,7 @@
   src: url(Fonts/wagon-extralightitalic-webfont.woff);
 }
 
-@import url("https://fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold");
+@import url("@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100&display=swap');");
 
 /* 1. Root */
 
