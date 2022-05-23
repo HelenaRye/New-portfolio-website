@@ -30,14 +30,14 @@
 }
 
 html {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 html,
 body {
   max-width: 100%;
   overflow-x: hidden;
-  height: 100%;
+
   background-color: var(--background-color);
   margin: 0;
   padding: 0;
@@ -52,7 +52,7 @@ p {
 }
 
 h1 {
-  font-family: var(--secondary-font-family);
+  font-family: "Wagon", sans-serif;
   font-size: 8.2em;
   font-weight: 70;
   margin: 0;
@@ -87,7 +87,6 @@ h3 {
   color: var(--text-color);
   cursor: pointer;
   text-decoration: none;
-  overflow: hidden;
   border-radius: 100%;
   padding: 10px 30px;
   border: 1px solid var(--text-color);
@@ -201,6 +200,14 @@ li {
 
 /* 3. Hero section */
 
+h1 > .designer {
+  font-family: "wagon-italic", sans-serif;
+}
+
+h1 > .developer {
+  font-family: "wagon-italic", sans-serif;
+}
+
 .star {
   display: inline-block;
   width: 40px;
@@ -239,10 +246,6 @@ li {
   display: flex;
   flex-direction: row;
   margin-top: -30px;
-}
-
-h1 span {
-  font-family: var(--third-font-family);
 }
 
 .hero-content {
@@ -327,7 +330,7 @@ h1 span {
 }
 
 .horizontal-scroll-wrapper {
-  overflow: hidden;
+  overflow-x: hidden;
   white-space: nowrap;
 }
 
@@ -1042,4 +1045,28 @@ input:focus {
 
 .nav-active {
   transform: translateX(0%);
+}
+
+/*Custom animations*/
+.headingWrapper {
+  overflow: hidden;
+  display: inline-block;
+  margin-bottom: -10px;
+  padding-bottom: 5px;
+}
+
+.char {
+  transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  transition-delay: calc(0.1s + (0.05s * var(--char-index)));
+}
+
+[data-aos="word-enter"] {
+  -webkit-transform: translateY(120%);
+  -moz-transform: translateY(120%);
+  transform: translateY(120%);
+}
+[data-aos="word-enter"].aos-animate {
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  transform: translateY(0%);
 }
