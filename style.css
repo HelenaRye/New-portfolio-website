@@ -515,10 +515,15 @@ h1 span {
   max-height: 160px;
 }
 
+.about-title h2 {
+  margin-bottom: -100px;
+}
+
 .big-star-icon {
   width: 60px;
   height: 60px;
   margin-bottom: -90px;
+  z-index: 9;
 }
 
 .small-star-icon {
@@ -878,12 +883,12 @@ input:focus {
   .about-image-container {
     content: "  ";
     border-radius: 300px;
-    width: 320px;
+    width: 250px;
   }
 
   h2 {
     font-size: 5em;
-    margin-bottom: -60px;
+    margin-bottom: -80px;
   }
 
   .about-image-content {
@@ -1012,6 +1017,10 @@ input:focus {
 
   .navbar {
     padding-bottom: 20px;
+  }
+
+  .big-star-icon {
+    margin-bottom: -60px;
   }
 }
 
