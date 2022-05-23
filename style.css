@@ -940,6 +940,7 @@ input:focus {
       #fff8ee 70%,
       #fff8ee
     );
+    margin-top: 20px;
   }
 
   .form-block {
