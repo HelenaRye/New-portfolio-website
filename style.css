@@ -686,6 +686,10 @@ input:focus {
   letter-spacing: 0.7px;
 }
 
+.socials ul li {
+  padding-left: 15px;
+}
+
 .footer .copyright {
   padding: 0px 30px;
   font-family: var(--primary-font-family);
@@ -928,6 +932,7 @@ input:focus {
       #fff8ee 90%,
       #fff8ee
     );
+    padding-bottom: 35px;
   }
   .background-container {
     background: radial-gradient(
@@ -960,11 +965,12 @@ input:focus {
   }
 
   .socials li {
-    padding-left: 10px;
+    padding-left: 15px;
   }
 
   .socials ul {
     margin: 0;
+    padding-bottom: 5px;
   }
 }
 
