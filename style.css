@@ -934,12 +934,12 @@ input:focus {
     );
   }
   .background-container {
-   background: radial-gradient(
-    ellipse 80% 500px,
-    #ffa996c2 20%,
-    #fff8ee 70%,
-    #fff8ee
-  )}
+    background: radial-gradient(
+      ellipse 80% 500px,
+      #ffa996c2 20%,
+      #fff8ee 70%,
+      #fff8ee
+    );
   }
 
   .form-block {
