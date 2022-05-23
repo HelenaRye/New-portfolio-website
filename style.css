@@ -993,7 +993,7 @@ input:focus {
     top: 0;
     left: 0;
     right: 0px;
-    height: 40vh;
+    height: 30vh;
     z-index: 99;
     background-color: var(--background-color);
     display: flex;
