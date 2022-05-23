@@ -701,6 +701,11 @@ input:focus {
   letter-spacing: 0.7px;
 }
 
+.socials .social-links {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
 @media screen and (max-width: 1024px) {
   h1 {
     font-size: 5.3em;
