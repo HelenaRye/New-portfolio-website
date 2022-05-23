@@ -925,6 +925,23 @@ input:focus {
     padding-top: 50px;
   }
 
+  .contact-section {
+    background: radial-gradient(
+      ellipse 60% 300px,
+      #ffa99688 20%,
+      #fff8ee 90%,
+      #fff8ee
+    );
+  }
+  .background-container {
+   background: radial-gradient(
+    ellipse 80% 500px,
+    #ffa996c2 20%,
+    #fff8ee 70%,
+    #fff8ee
+  )}
+  }
+
   .form-block {
     width: 350px;
     display: flex;
