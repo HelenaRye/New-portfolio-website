@@ -668,6 +668,15 @@ input:focus {
   background: #fff;
 }
 
+#status {
+  display: flex;
+  justify-content: center;
+  font-family: var(--primary-font-family);
+  font-size: 19px;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
 /* Footer */
 
 .footer {
