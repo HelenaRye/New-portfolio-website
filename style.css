@@ -245,7 +245,7 @@ h1 > .developer {
 .headline-2 {
   display: flex;
   flex-direction: row;
-  margin-top: -30px;
+  margin-top: -60px;
 }
 
 .hero-content {
@@ -407,7 +407,7 @@ h1 > .developer {
 }
 
 .Project-3 {
-  padding: 0px 90px 0px 90px;
+  padding: 0px 70px 0px 70px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -415,7 +415,7 @@ h1 > .developer {
 }
 
 .Project-2 {
-  padding: 500px 90px 0px 90px;
+  padding: 500px 70px 0px 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -423,7 +423,7 @@ h1 > .developer {
 }
 
 .Project-1 {
-  padding: 90px;
+  padding: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -431,7 +431,7 @@ h1 > .developer {
 }
 
 .Project-4 {
-  padding: 90px;
+  padding: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -671,7 +671,7 @@ input:focus {
 /* Footer */
 
 .footer {
-  padding-top: 40px;
+  padding: 30px 0px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -757,7 +757,7 @@ input:focus {
   .Project-2,
   .Project-3,
   .Project-4 {
-    padding: 80px 60px;
+    padding: 80px 10px;
   }
 
   .project-content {
@@ -788,13 +788,17 @@ input:focus {
   .about-second-paragraph {
     width: 70%;
   }
+
+  .headline-2 {
+    margin-top: -40px;
+  }
 }
 
 /* Mobile */
 
 @media screen and (max-width: 767px) {
   h1 {
-    font-size: 3.4em;
+    font-size: 3.2em;
   }
 
   .star {
@@ -810,7 +814,7 @@ input:focus {
   }
 
   .hero-section {
-    min-height: 36vh;
+    min-height: 30vh;
   }
 
   .hero-wrapper {
@@ -865,6 +869,7 @@ input:focus {
   .about-wrapper {
     display: flex;
     flex-direction: column;
+    padding-top: 1rem;
   }
 
   .about-first-paragraph,
@@ -980,6 +985,13 @@ input:focus {
     margin: 0;
     padding-bottom: 5px;
   }
+  .heading-wrapper > .char {
+    padding-right: none !important;
+  }
+
+  .word {
+    margin-top: -100px;
+  }
 }
 
 /* Mobile navigation */
@@ -1057,12 +1069,19 @@ input:focus {
   overflow: hidden;
   display: inline-block;
   margin-bottom: -10px;
-  padding-bottom: 5px;
+  padding-bottom: 1px;
+  margin-left: -1px;
 }
 
 .char {
   transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
   transition-delay: calc(0.1s + (0.05s * var(--char-index)));
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  padding-right: 3px;
 }
 
 [data-aos="word-enter"] {
