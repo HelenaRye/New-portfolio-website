@@ -294,6 +294,10 @@ h1 > .developer {
   position: absolute;
 }
 
+.button-scroll svg {
+  height: 60%;
+}
+
 /* Horizontal scroll section */
 
 .featured-projects {
